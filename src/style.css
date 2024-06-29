@@ -1,0 +1,119 @@
+@import url('./reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+:root{
+    --clr-Grayish-blue: hsl(237, 18%, 59%);
+    --clr-Soft-red: hsl(345, 95%, 68%);
+
+    --clr-White: hsl(0, 0%, 100%);
+    --clr-Dark-desaturated-blue: hsl(236, 21%, 26%);
+    --clr-Very-dark-blue: hsl(235, 16%, 14%);
+    --clr-Very-dark-mostly-black-blue: hsl(234, 17%, 12%);
+}
+
+body{
+    font-family: "Red Hat Text", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    background: url('../public/bg-stars.svg') no-repeat, url('../public/pattern-hills.svg') no-repeat bottom, #211a29;
+    background-size: cover, 100% auto;
+    display: grid;
+    place-items: center;
+}
+
+
+.counters{
+    display: flex;
+    justify-content: center;
+    max-width: 100vw;
+}
+
+h1{
+    color: var(--clr-White);
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    letter-spacing: 5px;
+}
+
+.value{
+    color: var(--clr-Soft-red);
+    font-size: 3rem;
+}
+
+.title{
+    color: var(--clr-Grayish-blue);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 1rem;
+}
+
+.card-container{
+    margin-inline: 1vw;
+}
+
+.card{
+    padding: 1rem;
+    position: relative;
+    box-shadow: 0 12px 1px -2px var(--clr-Very-dark-mostly-black-blue);
+}
+
+.card::before{
+    content: '';
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: hsl(236, 21%, 22%);
+    z-index: -1;
+    border-radius: 0.5rem;
+}
+
+.card::after{
+    content: '';
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    background-color: var(--clr-Dark-desaturated-blue);
+    z-index: -1;
+    border-radius: 0.5rem;
+}
+
+@media (width > 35em){
+    .card-container{
+        margin-inline: 1rem;
+    }
+    .card{
+        padding: 1rem 2rem;
+    }
+    .value{
+        font-size: 4rem;
+    }
+    h1{
+        margin-bottom: 6rem;
+    }
+}
+
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 30vh;
+}
+
+.icons img:hover{
+    filter: invert(51%) sepia(54%) saturate(1112%) hue-rotate(308deg) brightness(98%) contrast(100%);
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; color: var(--clr-White);
+    position: absolute; bottom: 0; right: 10%;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
