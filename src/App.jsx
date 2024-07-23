@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
 function App() {
 
   // Set the date we're counting down to
-  let countDownDate = new Date("July 9, 2024 15:37:25").getTime();
+  let countDownDate = new Date("July 30, 2024 15:37:25").getTime();
     
   const [time, setTime] = useState(new Date());
 
